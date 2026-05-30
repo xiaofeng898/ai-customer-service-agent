@@ -1,0 +1,22 @@
+# 环境变量（含 API 密钥，切勿提交）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# uni-app 编译产物
+frontend/unpackage/
+
+# 操作系统
+.DS_Store
+Thumbs.db

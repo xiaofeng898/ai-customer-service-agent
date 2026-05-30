@@ -1,0 +1,7 @@
+# ===== 通义千问 API（百炼平台 / DashScope）=====
+QWENG_API_KEY=your_api_key_here
+QWENG_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+QWENG_MODEL=qwen3-max-2026-01-23
+
+# ===== 其他可用模型 =====
+# qwen-plus / qwen-turbo / qwen-max / qwen3-max-2026-01-23

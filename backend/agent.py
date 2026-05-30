@@ -6,7 +6,7 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 import asyncio
-from mcp.mcp_client import mcp_client
+from my_mcp.mcp_client import mcp_client
 from prompts.prompt import SYSTEM_PROMPTS
 # 引入网络请求工具库
 import requests

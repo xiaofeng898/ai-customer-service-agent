@@ -1,4 +1,6 @@
-# 引入服务器创建工具
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -15,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # 静态资源托管配置
-app.mount("/static",StaticFiles(directory="../static"),name="static")
+app.mount("/static",StaticFiles(directory=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static")),name="static")
 
 # 配置url
 @app.get("/")

@@ -24,8 +24,8 @@ An AI-powered e-commerce customer service system. An LLM agent autonomously call
 |-------------|-------------|
 | `backend/app.py` | FastAPI server — chat, streaming, agent endpoints |
 | `backend/agent.py` | LLM loader + LangChain agent factory |
-| `mcp/mcp_server.py` | MCP server (FastMCP) — database, policies, tickets |
-| `mcp/mcp_client.py` | MCP client config (connects to mcp_server) |
+| `my_mcp/mcp_server.py` | MCP server (FastMCP) — database, policies, tickets |
+| `my_mcp/mcp_client.py` | MCP client config (connects to mcp_server) |
 | `prompts/prompt.py` | System prompt — e-commerce after-sales agent persona |
 | `frontend/` | uni-app mini-program — chat UI with Markdown rendering |
 | `sql/init.sql` | MySQL schema and seed data |
@@ -74,7 +74,7 @@ cp env_example.txt .env
 # Edit .env — fill in QWENG_API_KEY (DashScope / Alibaba Cloud)
 
 # 4. Start MCP server (terminal 1)
-python mcp/mcp_server.py
+python my_mcp/mcp_server.py
 # → MCP server on http://localhost:8082/mcp
 
 # 5. Start FastAPI backend (terminal 2)
@@ -94,7 +94,7 @@ ai-customer-service-agent/
 ├── backend/
 │   ├── app.py                 # FastAPI entry point
 │   └── agent.py               # LLM + agent factory
-├── mcp/
+├── my_mcp/
 │   ├── mcp_server.py           # MCP server (4 tools)
 │   └── mcp_client.py           # MCP client config
 ├── prompts/

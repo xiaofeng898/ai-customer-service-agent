@@ -24,8 +24,8 @@
 |------|------|
 | `backend/app.py` | FastAPI 服务端 — 聊天、流式输出、智能体调用 |
 | `backend/agent.py` | LLM 加载 + LangChain Agent 工厂 |
-| `mcp/mcp_server.py` | MCP 服务端（FastMCP）— 数据库查询、售后规则、工单管理 |
-| `mcp/mcp_client.py` | MCP 客户端配置（连接 mcp_server） |
+| `my_mcp/mcp_server.py` | MCP 服务端（FastMCP）— 数据库查询、售后规则、工单管理 |
+| `my_mcp/mcp_client.py` | MCP 客户端配置（连接 mcp_server） |
 | `prompts/prompt.py` | 系统提示词 — 电商售后客服智能体人设 |
 | `frontend/` | uni-app 小程序前端 — 聊天界面 + Markdown 渲染 |
 
@@ -73,7 +73,7 @@ cp env_example.txt .env
 # 编辑 .env — 填入 QWENG_API_KEY（阿里云百炼 / DashScope）
 
 # 4. 启动 MCP 服务（终端 1）
-python mcp/mcp_server.py
+python my_mcp/mcp_server.py
 # → MCP 服务运行在 http://localhost:8082/mcp
 
 # 5. 启动 FastAPI 后端（终端 2）
@@ -93,7 +93,7 @@ ai-customer-service-agent/
 ├── backend/
 │   ├── app.py                 # FastAPI 入口
 │   └── agent.py               # LLM + Agent 工厂
-├── mcp/
+├── my_mcp/
 │   ├── mcp_server.py           # MCP 服务端（4 个工具）
 │   └── mcp_client.py           # MCP 客户端配置
 ├── prompts/
